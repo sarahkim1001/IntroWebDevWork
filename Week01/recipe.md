@@ -17,7 +17,7 @@ let's get started!
 - 1 1/2 cup all purpose flour 
 - 1 Teaspooon Baking Soda 
 - 1 Teaspoon salt 
-- Walnuts 
+- Walnuts
 - Chocolate chips 
 - Vanilla Extract 
 
