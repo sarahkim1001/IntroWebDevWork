@@ -1,0 +1,16 @@
+A quick note on the article on wireframing...
+
+Wireframing is a fundamental process in communication with other teams and developments in design. 
+User experience problems are multifaceted, needing to consider the purpose/ objective of the project,
+the problem it it solving, the recipient of the product, and the destination of the tool/ page. 
+
+Drawing out the workflow in sketches can leave time for discussion on how the design can be improved
+for its purpose and useability. Feedback is another crucial element to refining the design to catch 
+unforeseen capabilities. 
+
+Getting familiar with helpful tools dedicated for the development of low and high fidelity wireframes 
+can help save time and make the job more simple in the long run. 
+
+Know your audience when developing the project, since knowledge and communication varies amongst 
+different teams. Think of effective ways of communicating a message to a specific role and team. 
+
