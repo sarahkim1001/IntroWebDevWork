@@ -3,14 +3,58 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Region B Category A</title>
+    <title>Ukranian Lunch</title>
     <meta name="description" content="Method 2 - Each Page as Own Directory Folder with Index.html within">
-</head>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=EB+Garamond&display=swap');
+            *{
+                margin:0;
+                padding: 0;
+            }
+    
+             ul {
+                list-style-type: none;
+                background-color: #777d91;
+                /*overflow: hidden;
+                height: 10px;*/
+                /*parent elements of items that display incline block may need to have 
+                the font size zer-ed out to remove the space between characters*/
+                font-size: 0;
+                font-family: 'Cute Font', sans-serif;
+                /*x,y,*blur*,*spread*, *color*/
+                box-shadow: 5px, 5px, 15px, 15px #ffbb4ddc;
+            }
+    
+            li{
+                display: inline-block;
+                font-size: 1rem;
+            }
+    
+          /*descendant selector*/
+            li a{
+                display: block; 
+                text-align: center;
+                width: 100px;
+                padding: 10px;
+                text-decoration: none;
+                color: #f5e6d4;
+    
+             }
+    
+            li a.active {
+                background-color: rgba(200,210,230,0.30);
+            }
+    
+            li a:hover{
+                background-color: #111;
+                color: white;
+            }
+        </style>
 </head>
 
+
 <body>
-    <h1>Region B Category A</h1>
-    <hr>
+
     <!-- Place your Nav Links Here -->
     <nav>
         <!-- use UL LI and A for Nav Links within our NAV tag -->
@@ -27,16 +71,16 @@
 
     <fieldset>
 
-        <li><a href= "../../regionA/index.html" > Region A</a></li>
-        <li><a href= "../../regionB/index.html" > Region B</a></li>
+        <li><a href= "../../regionA/index.html" > Ukraine</a></li>
+        <li><a href= "../../regionB/index.html" > Korean </a></li>
         
     </fieldset>
 
     <hr>
 
     <fieldset>
-        <li><a href= "../categoryA/index.html" > Category A</a></li>
-        <li><a href= "../categoryB/index.html"> Category B</a></li>
+        <li><a href= "../categoryA/index.html" > Lunch</a></li>
+        <li><a href= "../categoryB/index.html"> Dinner</a></li>
 
     </fieldset>
 </body>
