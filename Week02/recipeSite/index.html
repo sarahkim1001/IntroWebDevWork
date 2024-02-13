@@ -1,68 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HomePage</title>
+    <head>  
+        <meta charset=" utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title> Dropdown Menu Nested UL</title>
+        <style type="text/css">
+            body{
+                font-family: 'Roboto Mono', monospace;
+                padding: 20px 50px 150px;
+                font-size: 13px;
+                text-align: right;
+                background: rgb(53, 62, 88);
+                
+                
+            }
 
+            ul{
+                display: inline;
+                margin: 0;
+                padding: 15px 4px 17px;
+                list-style-type: none;
+                box-shadow: 0 0 5px rgba(0,0,0,0.15);
+            }
 
-    <style type="text/css">
-    @import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=EB+Garamond&display=swap');
-        *{
-            margin:0;
-            padding: 0;
-        }
+            ul li{
+                display: inline-block;
+                position: relative;
+                padding: 15px 10px;
+                background: #fff;
+                cursor: pointer;
+                transition: all 0.5s;
+            }
+/* hovering over list items */
+            ul li:hover{
+                background: #abc9f8;
+                color: #fff;
+            }
 
-         ul {
-            list-style-type: none;
-            background-color: #777d91;
-            /*overflow: hidden;
-            height: 10px;*/
-            /*parent elements of items that display incline block may need to have 
-            the font size zer-ed out to remove the space between characters*/
-            font-size: 0;
-            font-family: 'Cute Font', sans-serif;
-            /*x,y,*blur*,*spread*, *color*/
-            box-shadow: 5px, 5px, 15px, 15px #ffbb4ddc;
-        }
+            ul li ul{
+                padding: 0;
+                position: absolute;
+                top: 48px;
+                left: 0;
+                width: 150px;
+                box-shadow: none;
+                display: none;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.5s;
+            }
 
-        li{
-            display: inline-block;
-            font-size: 1rem;
-        }
+            ul li ul li{
+                background: #abc9f8;
+                display: block;
+                color: #fff;
+                text-shadow: none;
+            }
 
-      /*descendant selector*/
-        li a{
-            display: block; 
-            text-align: center;
-            width: 100px;
-            padding: 10px;
-            text-decoration: none;
-            color: #f5e6d4;
+            ul li ul li:hover{
+                background: #abc9f8;
+            }
 
-         }
+            ul li:hover ul {
+                display: block;
+                opacity: 1;
+                visibility: visible;
+            }
 
-        li a.active {
-            background-color: rgba(200,210,230,0.30);
-        }
+            li a {
+                color: #525258;
+            }
 
-        li a:hover{
-            background-color: #111;
+            h1 {
+            text-align: left;
             color: white;
-        }
-    </style>
-</head>
-<body>
-    <!--<h1>Global Foods Kitchen</h1>--> 
-    <nav>
-        <!-- use UL LI and A for Nav Links within our NAV tag -->
-        <ul>
-            <li><a href="./index.html">Global Foods Kitchen</a></li>
-            <li><a href="./recipes/index.html">Regions and Recipes</a></li>
-            <li><a href="./about/index.html">About</a></li>
-        </ul>
-    </nav>
+            }
+            
 
+        </style>
+    </head>
+
+<body>
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./recipes/index.html">Regions and Recipes</a>
+            <ul>
+                <li><a href= "./recipes/regionA/index.html">South Korea</a></li>
+                <li><a href= "./recipes/regionB/index.html">Ukraine</a></li>
+          </ul>
+         </li>
+         <li><a href="./about/index.html" >About</a></li>
+    </ul>
+<hr>
+<h1> Welcome! Homepage </h1>
 </body>
 
 </html>
+
+
+   
