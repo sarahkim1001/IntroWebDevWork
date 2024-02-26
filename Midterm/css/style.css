@@ -1,0 +1,88 @@
+/*Global Styles*/
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=M+PLUS+Code+Latin:wght@100..700&display=swap');
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family: "Carrois Gothic SC", sans-serif;
+}
+
+img{
+    width:100;
+    height: auto;
+}
+
+/* Navigation Bar Styles*/
+/* navigation bar area*/
+nav ul{
+    padding: 0;
+    margin:0;
+    display: flex;
+    justify-content:center;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(135, 140, 162, 0.2);
+}
+/*'content' section*/
+nav ul li{
+    list-style-type: none;
+    text-decoration: none;
+    box-shadow: none;
+    font-size: 1.3rem;
+    transition: all 1.2s;
+    color: rgba(20, 20, 54, 0.324);
+}
+
+/*hidden nav dropdown*/
+nav ul li ul {
+    padding:4rem;
+    margin: 1rem;
+    position: relative;
+    box-shadow: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+   
+}
+
+/*anchor tag text area appereance*/ 
+ul li a{
+    margin:1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    color:black;
+}
+
+/*color changes on nav */ 
+nav ul li:hover{
+    color: #000000;
+}
+
+/*list item color change on hover*/
+nav ul li ul li:hover{
+   /* background: rgba(255, 255, 255, 0.664);*/
+}
+
+/*dropdown menu appearing on hover*/
+nav ul li:hover ul {
+    display:flex;
+    flex-direction: column;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul:hover{
+    background-color: #f3f4f8;
+}
+
+/* current page class will display grey in dropdown nav) */
+.current-page{
+    opacity:0.4;
+    transform: translate(0,-1rem);
+}
+
+.other-page:hover{
+    scale: 1.08;
+}
