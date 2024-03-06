@@ -1,13 +1,17 @@
 /*Global Styles*/
 @import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=M+PLUS+Code+Latin:wght@100..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=M+PLUS+Code+Latin:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=M+PLUS+Code+Latin:wght@100..700&family=Nova+Square&display=swap');
 *{
     box-sizing:border-box;
 }
 
-body{
+html,body{
     margin:0;
-    font-family: "Carrois Gothic SC", sans-serif;
+    /*font-family: "Nova Square", sans-serif;*/
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #010009;
+    
 }
 
 img{
@@ -15,74 +19,236 @@ img{
     height: auto;
 }
 
-/* Navigation Bar Styles*/
+/* desktop first styling*/
+/* NAVIGATION BAR STYLES*/
 /* navigation bar area*/
 nav ul{
+    z-index:1;
     padding: 0;
     margin:0;
     display: flex;
     justify-content:center;
+    position:fixed; /*LOOK HERE FOR CHANGES*/ 
+    width:100%;
+    align-self:center;
     text-align: center;
-    box-shadow: 0 0 30px rgba(135, 140, 162, 0.2);
+    visibility:hidden;
+    background-color: #000000;
+    transition: opacity 1.5s ease;
 }
-/*'content' section*/
+
+
+/*'content' section and children*/
 nav ul li{
+    padding:.4rem;
+    margin-top: 1rem;
+    margin-bottom:1rem;
+    /*border-color: rgba(240, 248, 255, 0.353);
+    border-style: groove;
+    border-radius: .2rem;*/
     list-style-type: none;
     text-decoration: none;
-    box-shadow: none;
-    font-size: 1.3rem;
-    transition: all 1.2s;
-    color: rgba(20, 20, 54, 0.324);
+    font-size: 1.2rem;
+    transition: all 1.5s;
+    color: #7c0a0a;
+    font-weight:500;
+    visibility: visible;
+    background-color: #000000d9;
 }
+
 
 /*hidden nav dropdown*/
 nav ul li ul {
-    padding:4rem;
-    margin: 1rem;
+    padding:6rem;
+    width:100vw;
     position: relative;
-    box-shadow: none;
     display: none;
     opacity: 0;
     visibility: hidden;
-   
+    box-shadow: #cdf1ff;
 }
+
 
 /*anchor tag text area appereance*/ 
 ul li a{
     margin:1rem;
     text-decoration: none;
     font-size: 1rem;
-    color:black;
+    color:rgb(94, 0, 0);
+    background-color:transparent;
 }
 
-/*color changes on nav */ 
+/*color changes on navDONT KNOW IF THIS SERVES ANY USE
 nav ul li:hover{
-    color: #000000;
+    margin-top:20;
+    color: #5c1010;
+    cursor: pointer;
+}
+*/
+
+ 
+ 
+ /*dropdown menu appearing on hover*/
+ nav ul li:hover ul{
+     display:flex;
+     flex-direction: column;
+     opacity: .75;
+     background-color: #000000;
+     visibility: visible;
+     margin:2rem;
+     margin-top:.51rem;
+ }
+
+
+.navfun{
+    cursor: auto;
+    opacity:.7;
+    transition: all 2s ease;
 }
 
-/*list item color change on hover*/
-nav ul li ul li:hover{
-   /* background: rgba(255, 255, 255, 0.664);*/
-}
-
-/*dropdown menu appearing on hover*/
-nav ul li:hover ul {
-    display:flex;
-    flex-direction: column;
-    opacity: 1;
-    visibility: visible;
-}
-
-nav ul:hover{
-    background-color: #f3f4f8;
+.navfun:hover{
+    transform:translate(0,.5rem);
+    color:rgb(69, 9, 9);
+    opacity:1;
+    /*
+    border-bottom: 1px;
+    border-top:1px;
+    border-color: rgba(162, 212, 255, 0.438);
+    border-style:dashed;*/
 }
 
 /* current page class will display grey in dropdown nav) */
 .current-page{
-    opacity:0.4;
+    opacity:0.65;
     transform: translate(0,-1rem);
+    transition: all .1s ease;
 }
 
-.other-page:hover{
-    scale: 1.08;
+/* other pages anchor tag will enlarge upon hovering over*/
+.other-page{
+    transition: all .7s ease;
+    
 }
+.other-page:hover{
+    scale: 1.10;
+    opacity:1;
+}
+/* END OF NAVIGATION BAR STYLES*/
+
+/*THIS IS THE INTRODUCTORY PARAGRAPH STYLES*/
+div.intro {
+    position:absolute;
+    top:15%;
+    padding:2rem 5rem;
+    align-self: center;
+    font-size: .9rem;
+    color:rgba(86, 4, 4, 0.849);
+}
+
+.header2{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+
+/* BEGINNING OF THE GALLERY STYLES*/
+
+/*
+.container{
+    position:absolute; 
+    top:70%;
+    z-index: 0.1;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;   
+}
+*/
+.container{
+    padding-top:30rem;
+    margin:1rem 6rem;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+}
+
+
+/*FLIP CARDS!*/
+
+.flip_card {
+    cursor:pointer;
+    background-color: transparent;
+    width: 300px;
+    height: 500px;
+    perspective: 2000px; 
+}
+    
+.flip_card_inner {
+    
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 4s ease-in-out;
+    transform-style: preserve-3d;
+    }
+    
+.flip_card:hover .flip_card_inner {
+    transform: rotateY(180deg);
+    
+    }
+    
+.flip_card_front, .flip_card_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+    }
+    
+.flip_card_front {
+    filter: blur(1px) grayscale(100) brightness(60%) saturate(70%);
+    transition: all 1s ease;
+    }
+.flip_card_front:hover{
+    filter: blur(0) grayscale(0) brightness(90%) saturate(70%);
+}
+    
+.flip_card_back {
+    
+    transform: rotateY(180deg);
+    color:rgba(106, 0, 0, 0.871);
+    font-size:1rem;
+    border-color: #5705057b;
+    border-style: groove;
+    padding:1rem;
+    text-align: justify;
+    }
+
+  /* TABLE STYLING for the INDEX PAGE */
+table, td, th {
+    border: 1px solid rgba(121, 14, 14, 0.593);
+  }
+
+  
+  table {
+    position: absolute;
+    margin:8rem auto;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th {
+    text-align: left;
+    font-size:1.3rem;
+    color:rgba(86, 4, 4, 0.849);
+  }
+
+  td{
+    color:rgba(121, 4, 4, 0.635);
+    font-size:1rem;
+  }
+  
