@@ -10,18 +10,20 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
     <link rel="stylesheet" href="./css/style.css" />
-  </head>
 
-  <body>
+   </head>
 
+
+<body>
     <header>
       <nav>
           <ul>
               <li class="navfun"><a href="#">[ CONTENTS ]</a>
-                    <ul>
+                    <ul id="navItems" >
                       <li class="current-page"><a href="./index.html">propaganda</a></li>
                       <li class="other-page"><a href="./indexPage/index.html">source index</a></li>
                       <li class="other-page"><a href="./about/index.html">about</a></li>
+                      <a href="./index.html" class="close">X</a>
                   </ul>
               </li>
           </ul>
@@ -29,17 +31,91 @@
    <header>
 
     <div class="intro">
-      <h2 class="header2">Through the looking glass</h1>
+      <h2 class="header2">an ideological imprint</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat, arcu in auctor rhoncus, enim arcu luctus urna, ac volutpat mauris massa sed nisi. Suspendisse mollis elementum nunc, sit amet mollis tortor porta a. Ut sollicitudin, quam nec scelerisque lobortis, libero felis varius nunc, sed fringilla mi orci vel sapien. Duis eget ornare lacus. Donec et luctus purus, eu maximus purus. Donec non est gravida, feugiat odio eu, vehicula lectus. Sed fringilla pulvinar ultricies. Suspendisse nec dui non justo tristique porttitor. Sed ultrices tristique mollis. Aenean id erat diam. Proin malesuada ultricies nunc, non venenatis erat consectetur rhoncus.
- 
+        Although propaganda is regarded as a modern term, closely associated with the instances of poster propaganda distributed throughout the West in World War I and World War II, the essence of propaganda can be traced back to the Ancient Civilizations. Propaganda has morphed through many forms, conveying itself through communication systems and mass media technologies concurrent to its day and age. Created with the intent to suppose an idea/ truth or to shape social and cultural attitudes, propaganda has the power to subject the masses to a system of belief or framework of thought. 
       <p>
+      <h4 class="dInstruct">*hover over an article to reveal its context*</h4>
+      <h4 class="mInstruct">*press on an article to reveal its context*</h4>
 
     </div>
 
 
-
+    <!--<div class="mobile-instruction">
+      <p>hold down on each card to get more information</p>
+    </div>-->
     <div class="container">
+
+      <div class="flip_card">
+        <div class="flip_card_inner">
+         <div class="flip_card_front">
+            <img src="img/toPieces.jpeg" alt="Pharaoh Merenptah" style="width:300px;height:500px;">
+        </div>
+         <div class="flip_card_back">
+            <h3 class="info"> 1213-1204 BCE </h3>
+            <h3 class ="title">Pharaoh Merneptah smiting enemies </h3>
+            <p class="theMeat"> Sunken Limestone Relief Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor egestas dignissim. Donec feugiat, urna eget fringilla vulputate, dui risus tempor urna, ut tempor lorem nulla quis nulla. Donec sit amet venenatis mi. Maecenas ultricies semper eros, eu suscipit purus congue sed. Vestibulum ornare suscipit justo eu vulputate.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip_card">
+        <div class="flip_card_inner">
+         <div class="flip_card_front">
+            <img src="img/darius2.jpeg" style="width:300px;height:500px;">
+          </div>
+          <div class="flip_card_back">
+            <h3 class="info"> 1213-1204 BCE </h3>
+            <h3 class ="title">Pharaoh Merneptah smiting enemies </h3>
+            <p class="theMeat"> Sunken Limestone Relief Lor
+            
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="flip_card">
+        <div class="flip_card_inner">
+         <div class="flip_card_front">
+            <img src="img/zaCoin.webp" style="width:300px;height:500px;">
+          </div>
+          <div class="flip_card_back">
+            <h3 class="info"> 336-323 B.C. </h3>
+            <h3 class ="title">Tetradrachm of Alexander the Great</h3>
+            <p class="theMeat"> During the reign of Alexander the great, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor egestas dignissim. Donec feugiat, urna eget fringilla vulputate, dui risus tempor urna, ut tempor lorem nulla quis nulla. Donec sit amet venenatis mi. Maecenas ultricies semper eros, eu suscipit purus congue sed. Vestibulum ornare suscipit justo eu vulputate
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="flip_card">
+        <div class="flip_card_inner">
+         <div class="flip_card_front">
+            <img src="img/ceaserCoin.png" style="width:300px;height:500px;">
+          </div>
+          <div class="flip_card_back">
+            <h3 class="info"> 44 BC </h3>
+            <h3 class ="title">Portrait Denarius Of Julius Caesar</h3>
+            <p class="theMeat"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor egestas dignissim. Donec feugiat, urna eget fringilla vulputate, dui risus tempor urna, ut tempor lorem nulla quis nulla. Donec sit amet venenatis mi. Maecenas ultricies semper eros, eu suscipit purus congue sed. Vestibulum ornare suscipit justo eu vulputate
+            
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="flip_card">
+        <div class="flip_card_inner">
+         <div class="flip_card_front">
+            <img src="img/donkeyPope.jpeg" alt="Lucas Cranach, The Donkey-Pope of Rome (1523)" style="width:300px;height:500px;">
+        </div>
+         <div class="flip_card_back">
+            <h3 class="info"> 1523 Protestant Revolution </h3>
+            <h3 class ="title">The Donkey-Pope of Rome</h3>
+            <p class="theMeat"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor egestas dignissim. Donec feugiat, urna eget fringilla vulputate, dui risus tempor urna, ut tempor lorem nulla quis nulla. Donec sit amet venenatis mi. Maecenas ultricies semper eros, eu suscipit purus congue sed. Vestibulum ornare suscipit justo eu vulputate.</p>
+          </div>
+        </div>
+      </div>
+
 
       <div class="flip_card">
         <div class="flip_card_inner">
@@ -47,8 +123,53 @@
             <img src="./img/apocalypticMessage.jpeg" alt="Russian Propaganda Poster" style="width:300px;height:500px;">
         </div>
          <div class="flip_card_back">
-            <h3> 1920 (Russia) Apocalyptic Message </h3>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor egestas dignissim. Donec feugiat, urna eget fringilla vulputate, dui risus tempor urna, ut tempor lorem nulla quis nulla. Donec sit amet venenatis mi. Maecenas ultricies semper eros, eu suscipit purus congue sed. Vestibulum ornare suscipit justo eu vulputate.</p>
+            <h3 class="info"> 1920 Russia </h3>
+            <h3 class ="title">Apocalyptic Message</h3>
+            <p class="theMeat"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor egestas dignissim. Donec feugiat, urna eget fringilla vulputate, dui risus tempor urna, ut tempor lorem nulla quis nulla. Donec sit amet venenatis mi. Maecenas ultricies semper eros, eu suscipit purus congue sed. Vestibulum ornare suscipit justo eu vulputate.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flip_card">
+        <div class="flip_card_inner">
+         <div class="flip_card_front">
+            <img src="img/developNature.jpeg" style="width:300px;height:500px;">
+          </div>
+          <div class="flip_card_back">
+            <h3 class="info"> 1920 Russia </h3>
+            <h3 class ="title">Develop Nature</h3>
+            <p class="theMeat"> Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor egestas dignissim. Donec feugiat, urna eget fringilla vulputate, dui risus tempor urna, ut tempor lorem nulla quis nulla. Donec sit amet venenatis mi. Maecenas ultricies semper eros, eu suscipit purus congue sed. Vestibulum ornare suscipit justo eu vulputate
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="flip_card">
+        <div class="flip_card_inner">
+         <div class="flip_card_front">
+            <img src="img/koreanWar.jpeg" style="width:300px;height:500px;">
+          </div>
+          <div class="flip_card_back">
+            <h3 class="info"> 1952 Russia </h3>
+            <h3 class ="title">American Civilization in Korea</h3>
+            <p class="theMeat"> Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor egestas dignissim. Donec feugiat, urna eget fringilla vulputate, dui risus tempor urna, ut tempor lorem nulla quis nulla. Donec sit amet venenatis mi. Maecenas ultricies semper eros, eu suscipit purus congue sed. Vestibulum ornare suscipit justo eu vulputate
+            
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="flip_card">
+        <div class="flip_card_inner">
+         <div class="flip_card_front">
+            <img src="img/disneyForNuclearEnergy.jpeg" style="width:300px;height:500px;">
+          </div>
+          <div class="flip_card_back">
+            <h3 class="info"> 1956 The United States </h3>
+            <h3 class ="title">Our Friend The Atom - Disney</h3>
+            <p class="theMeat"> Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor egestas dignissim. Donec feugiat, urna eget fringilla vulputate, dui risus tempor urna, ut tempor lorem nulla quis nulla. Donec sit amet venenatis mi. Maecenas ultricies semper eros, eu suscipit purus congue sed. Vestibulum ornare suscipit justo eu vulputate
+            
           </div>
         </div>
       </div>
@@ -60,6 +181,20 @@
             <img src="img/religionSmooshed.jpeg" style="width:300px;height:500px;">
           </div>
           <div class="flip_card_back">
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="flip_card">
+        <div class="flip_card_inner">
+         <div class="flip_card_front">
+            <img src="img/salvadorUS.jpeg" style="width:300px;height:500px;">
+          </div>
+          <div class="flip_card_back">
+            <h3 class="info"> 1982 Russia </h3>
+            <h3 class ="title">In Order To Save The Village From Terrorists, We had to destroy the village </h3>
+            <p class="theMeat"> Lorem ipsum dolor sit amet, 
             
           </div>
         </div>
@@ -87,48 +222,9 @@
         </div>
       </div>
 
-      <div class="flip_card">
-        <div class="flip_card_inner">
-         <div class="flip_card_front">
-            <img src="img/womenDominationOhNo.jpg" style="width:300px;height:500px;">
-          </div>
-          <div class="flip_card_back">
-            
-          </div>
-        </div>
-      </div>
-
-      <div class="flip_card">
-        <div class="flip_card_inner">
-         <div class="flip_card_front">
-            <img src="img/womenDominationOhNo.jpg" style="width:300px;height:500px;">
-          </div>
-          <div class="flip_card_back">
-            
-          </div>
-        </div>
-      </div>
-      <div class="flip_card">
-        <div class="flip_card_inner">
-         <div class="flip_card_front">
-            <img src="img/womenDominationOhNo.jpg" style="width:300px;height:500px;">
-          </div>
-          <div class="flip_card_back">
-            
-          </div>
-        </div>
-      </div>
-      <div class="flip_card">
-        <div class="flip_card_inner">
-         <div class="flip_card_front">
-            <img src="img/womenDominationOhNo.jpg" style="width:300px;height:500px;">
-          </div>
-          <div class="flip_card_back">
-            
-          </div>
-        </div>
-      </div>
-      
+     
+    
+    
 
     </div>
 

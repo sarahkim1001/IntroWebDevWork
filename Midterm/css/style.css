@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=M+PLUS+Code+Latin:wght@100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=M+PLUS+Code+Latin:wght@100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=M+PLUS+Code+Latin:wght@100..700&family=Nova+Square&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=M+PLUS+Code+Latin:wght@100..700&family=Nanum+Myeongjo&family=Nova+Square&family=Syne+Mono&display=swap');
 *{
     box-sizing:border-box;
 }
 
 html,body{
     margin:0;
-    /*font-family: "Nova Square", sans-serif;*/
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Syne Mono", monospace;
     background-color: #010009;
     
 }
@@ -23,7 +23,7 @@ img{
 /* NAVIGATION BAR STYLES*/
 /* navigation bar area*/
 nav ul{
-    z-index:1;
+    z-index:10005;
     padding: 0;
     margin:0;
     display: flex;
@@ -40,6 +40,7 @@ nav ul{
 
 /*'content' section and children*/
 nav ul li{
+    z-index:1000;
     padding:.4rem;
     margin-top: 1rem;
     margin-bottom:1rem;
@@ -48,9 +49,9 @@ nav ul li{
     border-radius: .2rem;*/
     list-style-type: none;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     transition: all 1.5s;
-    color: #7c0a0a;
+    color: #900000;
     font-weight:500;
     visibility: visible;
     background-color: #000000d9;
@@ -59,7 +60,7 @@ nav ul li{
 
 /*hidden nav dropdown*/
 nav ul li ul {
-    padding:6rem;
+    padding:4rem;
     width:100vw;
     position: relative;
     display: none;
@@ -69,25 +70,47 @@ nav ul li ul {
 }
 
 
+a.close{
+    background-color: transparent;
+    margin-top:2rem;
+    margin-bottom:0;
+    padding-bottom:0rem;
+    color:rgb(84, 3, 3);
+    border-color: transparent;
+    font-size:1.25rem;
+    cursor: pointer;
+    scale:1;
+    transition:all 1s ease;
+}
+
+a.close:hover{
+    text-decoration:underline;
+    scale: 1.4;
+}
+
+a.close:active .navfun{
+    opacity:0;
+}
+
+/*
+nav ul li:hover button{
+    cursor: pointer;
+    opacity:1;
+    visibility:visible
+}*/
+
 /*anchor tag text area appereance*/ 
 ul li a{
     margin:1rem;
     text-decoration: none;
-    font-size: 1rem;
-    color:rgb(94, 0, 0);
+    font-size: 1.2rem;
+    color:#750000;
     background-color:transparent;
 }
 
-/*color changes on navDONT KNOW IF THIS SERVES ANY USE
-nav ul li:hover{
-    margin-top:20;
-    color: #5c1010;
-    cursor: pointer;
+ul li a:hover{
+    text-decoration:underline;
 }
-*/
-
- 
- 
  /*dropdown menu appearing on hover*/
  nav ul li:hover ul{
      display:flex;
@@ -102,24 +125,19 @@ nav ul li:hover{
 
 .navfun{
     cursor: auto;
-    opacity:.7;
+    opacity:.75;
     transition: all 2s ease;
 }
 
 .navfun:hover{
     transform:translate(0,.5rem);
-    color:rgb(69, 9, 9);
+    color:rgb(88, 3, 3);
     opacity:1;
-    /*
-    border-bottom: 1px;
-    border-top:1px;
-    border-color: rgba(162, 212, 255, 0.438);
-    border-style:dashed;*/
 }
 
 /* current page class will display grey in dropdown nav) */
 .current-page{
-    opacity:0.65;
+    opacity:0.75;
     transform: translate(0,-1rem);
     transition: all .1s ease;
 }
@@ -127,8 +145,8 @@ nav ul li:hover{
 /* other pages anchor tag will enlarge upon hovering over*/
 .other-page{
     transition: all .7s ease;
-    
 }
+
 .other-page:hover{
     scale: 1.10;
     opacity:1;
@@ -138,11 +156,11 @@ nav ul li:hover{
 /*THIS IS THE INTRODUCTORY PARAGRAPH STYLES*/
 div.intro {
     position:absolute;
-    top:15%;
+    top:8rem;
     padding:2rem 5rem;
     align-self: center;
-    font-size: .9rem;
-    color:rgba(86, 4, 4, 0.849);
+    font-size: 1rem;
+    color:rgba(113, 0, 0, 0.849);
 }
 
 .header2{
@@ -151,43 +169,44 @@ div.intro {
     font-weight: 400;
 }
 
-
-/* BEGINNING OF THE GALLERY STYLES*/
-
-/*
-.container{
-    position:absolute; 
-    top:70%;
-    z-index: 0.1;
-    width:100%;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;   
+.dInstruct{
+    display:block;
+    margin-top:7rem;
+    text-align:center;
 }
-*/
+
+.mInstruct{
+    display:none;
+}
+
+
+/* BEGINNING OF THE GALLERY/FLIP CARD STYLES*/
+/*Flip Card Container Gallery*/
 .container{
     padding-top:30rem;
-    margin:1rem 6rem;
+    margin:0rem 3rem;
+    margin-bottom:15rem;
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
-
-
 /*FLIP CARDS!*/
-
 .flip_card {
     cursor:pointer;
+    margin: 3rem 2rem;
     background-color: transparent;
     width: 300px;
     height: 500px;
     perspective: 2000px; 
+    transform: scale(1);
+    transition: all 9s ease;
 }
-    
+.flip_card:hover{
+    z-index:999;
+    transform: scale(1.15);
+}   
 .flip_card_inner {
-    
     position: relative;
     width: 100%;
     height: 100%;
@@ -195,60 +214,233 @@ div.intro {
     transition: transform 4s ease-in-out;
     transform-style: preserve-3d;
     }
-    
 .flip_card:hover .flip_card_inner {
     transform: rotateY(180deg);
-    
     }
-    
 .flip_card_front, .flip_card_back {
     position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
-    }
-    
+    } 
 .flip_card_front {
     filter: blur(1px) grayscale(100) brightness(60%) saturate(70%);
     transition: all 1s ease;
     }
 .flip_card_front:hover{
     filter: blur(0) grayscale(0) brightness(90%) saturate(70%);
-}
-    
-.flip_card_back {
-    
+}   
+.flip_card_back { 
     transform: rotateY(180deg);
-    color:rgba(106, 0, 0, 0.871);
+    color:rgba(113, 0, 0, 0.849);
     font-size:1rem;
     border-color: #5705057b;
-    border-style: groove;
+    border-style: dashed;
     padding:1rem;
     text-align: justify;
     }
 
-  /* TABLE STYLING for the INDEX PAGE */
+.info{
+    text-align:center;    
+}
+       
+.title{
+    text-align:center;  
+    font-style: italic;
+}
+.theMeat{
+    font-size:.9rem;
+}
+
+    /*MEDIA QUERIES FOR HOME PAGE*/
+    @media screen and (max-width:768px){
+        div.intro {
+            position:absolute;
+            top:5.5rem;
+            padding:1.25rem 1.5rem;
+            align-self: center;
+            font-size: .9rem;
+            text-align: justify;
+        }
+        .header2{
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+        .dInstruct{
+            display:none;
+        }
+        
+        .mInstruct{
+            margin-top:3rem;
+            display:block;
+            text-align:center;
+        }
+
+        nav ul li{
+            margin-top: 2rem;
+            margin-bottom:2rem;
+        }
+        .container{
+            padding-top:30rem;
+            margin:0 2rem;
+            display:flex;
+            flex-direction:row;
+            justify-content: center;
+        }
+        nav ul li ul {
+            padding:2rem;
+        }
+
+        nav ul li:active ul{
+            display:flex;
+            flex-direction: column;
+            opacity: .75;
+            background-color: #000000;
+            visibility: visible;
+            margin:2rem;
+            margin-top:.51rem;
+        }
+        .navfun:active{
+            transform:translate(0,.5rem);
+            color:rgb(75, 8, 8);
+            opacity:1;
+        }
+
+        .other-page:active{
+            scale: 1.10;
+            opacity:1;
+        }
+    
+        ul li a:active{
+            text-decoration:underline;
+        }
+
+        /*
+        div.mobile-instruction{
+            padding-top:5rem;
+            margin:0 2rem;
+            display:flex;
+            flex-direction:row;
+            justify-content: center;
+            text-align:center;
+            z-index:10000000;
+        }*/
+
+        .flip_card {
+            margin:2rem 2rem;
+            margin-bottom:3rem;
+        }
+
+        .flip_card:active{
+            z-index:999;
+            transform: scale(1.15);
+        }
+        .flip_card:active .flip_card_inner {
+            transform: rotateY(180deg);
+        }
+         .flip_card_front:active{
+            filter: blur(0) grayscale(0) brightness(90%) saturate(70%);
+        }
+        
+    }
+
+
+
+
+  /* INDEX PAGE STYLING */
+  /*TABLE FOR THE SOURCES */
 table, td, th {
-    border: 1px solid rgba(121, 14, 14, 0.593);
+    border: 1px solid rgba(121, 14, 14, 0.593); /*border for each item in the table--> share same border style*/
   }
 
   
   table {
     position: absolute;
     margin:8rem auto;
-    border-collapse: collapse;
+    border-collapse: collapse; /*Adjacent cells have shared borders (the collapsed-border table rendering model).*/
     width: 100%;
   }
   
   th {
     text-align: left;
     font-size:1.3rem;
-    color:rgba(86, 4, 4, 0.849);
+    color:#6b0000;
   }
 
   td{
-    color:rgba(121, 4, 4, 0.635);
+    color:#6b0000;
     font-size:1rem;
   }
-  
+
+  .indexN{
+    cursor: pointer;
+  }
+  /*
+  .card-container{
+    position: absolute;
+    margin:8rem auto;
+    align-items: left;
+  }
+
+  .cell{
+    width:100%;
+    height:100%;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    opacity:100%;
+  }
+*/
+
+@media screen and (max-width:768px){
+    th {
+        text-align: center;
+        font-size:1.2rem;
+      }
+      td{
+        color:rgba(121, 4, 4, 0.635);
+        font-size:.9rem;
+        text-align: center;
+      }
+}
+
+
+/* ABOUT PAGE STYLES*/
+
+.aboutMe{
+    display:flex;
+    flex-direction:row;
+    width:60%;
+    font-size:1rem;
+    color:#750000;
+    padding:10rem 7rem;
+}
+.aboutHead{
+    display:flex;
+    flex-direction: row;
+    padding-top:8rem;
+    width:90%;
+    font-size:2rem;
+    padding-left:30rem;
+    color:#750000;
+}
+
+@media screen and (max-width:768px){
+    .aboutMe{
+        display:flex;
+        flex-direction:row;
+        width:100%;
+        padding:0 2rem;
+    }
+    .aboutHead{
+        display:flex;
+        flex-direction:row;
+        justify-self: center;
+        padding-top:8rem;
+        padding-bottom:1rem;
+        padding-left:2rem;
+    }
+}
+
