@@ -1,7 +1,4 @@
 /*Global Styles*/
-@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=M+PLUS+Code+Latin:wght@100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=M+PLUS+Code+Latin:wght@100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=M+PLUS+Code+Latin:wght@100..700&family=Nova+Square&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=M+PLUS+Code+Latin:wght@100..700&family=Nanum+Myeongjo&family=Nova+Square&family=Syne+Mono&display=swap');
 *{
     box-sizing:border-box;
@@ -11,20 +8,18 @@ html,body{
     margin:0;
     font-family: "Syne Mono", monospace;
     background-color: #010009;
-    
 }
 
 img{
-    width:100;
+    width:100%;
     height: auto;
 }
-
 /* desktop first styling*/
 /* NAVIGATION BAR STYLES*/
 /* navigation bar area*/
 nav ul{
     z-index:10005;
-    padding: 0;
+    padding:0;
     margin:0;
     display: flex;
     justify-content:center;
@@ -37,16 +32,12 @@ nav ul{
     transition: opacity 1.5s ease;
 }
 
-
-/*'content' section and children*/
+/*'content' and children*/
 nav ul li{
     z-index:1000;
     padding:.4rem;
     margin-top: 1rem;
     margin-bottom:1rem;
-    /*border-color: rgba(240, 248, 255, 0.353);
-    border-style: groove;
-    border-radius: .2rem;*/
     list-style-type: none;
     text-decoration: none;
     font-size: 1.3rem;
@@ -57,7 +48,6 @@ nav ul li{
     background-color: #000000d9;
 }
 
-
 /*hidden nav dropdown*/
 nav ul li ul {
     padding:4rem;
@@ -66,9 +56,7 @@ nav ul li ul {
     display: none;
     opacity: 0;
     visibility: hidden;
-    box-shadow: #cdf1ff;
 }
-
 
 a.close{
     background-color: transparent;
@@ -82,22 +70,13 @@ a.close{
     scale:1;
     transition:all 1s ease;
 }
-
 a.close:hover{
     text-decoration:underline;
     scale: 1.4;
 }
-
 a.close:active .navfun{
     opacity:0;
 }
-
-/*
-nav ul li:hover button{
-    cursor: pointer;
-    opacity:1;
-    visibility:visible
-}*/
 
 /*anchor tag text area appereance*/ 
 ul li a{
@@ -121,8 +100,6 @@ ul li a:hover{
      margin:2rem;
      margin-top:.51rem;
  }
-
-
 .navfun{
     cursor: auto;
     opacity:.75;
@@ -134,56 +111,71 @@ ul li a:hover{
     color:rgb(88, 3, 3);
     opacity:1;
 }
-
 /* current page class will display grey in dropdown nav) */
 .current-page{
-    opacity:0.75;
+    opacity:0.70;
     transform: translate(0,-1rem);
     transition: all .1s ease;
 }
-
 /* other pages anchor tag will enlarge upon hovering over*/
 .other-page{
     transition: all .7s ease;
 }
-
 .other-page:hover{
     scale: 1.10;
     opacity:1;
 }
 /* END OF NAVIGATION BAR STYLES*/
+/*positioning the image of the handprint*/
+
+.print{
+    width:30%;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    opacity:0.35;
+    margin-bottom:0rem;
+}
 
 /*THIS IS THE INTRODUCTORY PARAGRAPH STYLES*/
 div.intro {
     position:absolute;
     top:8rem;
-    padding:2rem 5rem;
-    align-self: center;
+    padding:5rem;
+    padding-left:26rem;
+    padding-right:5rem;
+    align-self: right;
     font-size: 1rem;
     color:rgba(113, 0, 0, 0.849);
+    line-height:1.7rem;
+    text-align:right;
 }
-
+/*positioning and styling the header*/
 .header2{
-    text-align: center;
-    font-size: 1.3rem;
+    text-align: left;
+    font-size: 2.5rem;
     font-weight: 400;
+    padding-right:10rem;
+    padding-left: 6rem;
+    padding-bottom:2rem;
+    padding-top:8rem;
 }
-
+/*instruction for card flip for desktop*/
 .dInstruct{
     display:block;
-    margin-top:7rem;
-    text-align:center;
+    margin-top:18rem;
+    text-align:left;
+    font-size:1.1rem;
 }
-
+/*instructions for mobile are hidden*/
 .mInstruct{
     display:none;
 }
 
-
 /* BEGINNING OF THE GALLERY/FLIP CARD STYLES*/
 /*Flip Card Container Gallery*/
 .container{
-    padding-top:30rem;
+    padding-top:7rem;
     margin:0rem 3rem;
     margin-bottom:15rem;
     display:flex;
@@ -194,7 +186,7 @@ div.intro {
 /*FLIP CARDS!*/
 .flip_card {
     cursor:pointer;
-    margin: 3rem 2rem;
+    margin: 3rem 1rem;
     background-color: transparent;
     width: 300px;
     height: 500px;
@@ -237,54 +229,69 @@ div.intro {
     font-size:1rem;
     border-color: #5705057b;
     border-style: dashed;
-    padding:1rem;
-    text-align: justify;
+    padding:.5rem;
+    text-align:left;
     }
 
+    /* info class for the back of the flip card*/
 .info{
-    text-align:center;    
+    text-align:center;  
+    font-size:1.3rem;
 }
-       
+/* ID number specs for the back of each flip card*/
+.idNum{
+    text-align:center;
+    font-size:.9rem;
+ }
+    
+ /*title spec for the back of each flip card*/
 .title{
     text-align:center;  
     font-style: italic;
+    font-size:1.1rem;
 }
+/* the paragraph on the back of each flipcard*/
 .theMeat{
-    font-size:.9rem;
+    font-size:.8rem;
 }
 
     /*MEDIA QUERIES FOR HOME PAGE*/
     @media screen and (max-width:768px){
         div.intro {
             position:absolute;
-            top:5.5rem;
+            width:100%;
+            top:44rem;
             padding:1.25rem 1.5rem;
-            align-self: center;
+            align-self: left;
             font-size: .9rem;
             text-align: justify;
+            line-height:1.3rem;
         }
         .header2{
-            text-align: center;
-            font-size: 1.3rem;
+            text-align: left;
+            font-size: 1.7rem;
             font-weight: 400;
+            padding-bottom:0;
+            padding-right:0;
         }
         .dInstruct{
             display:none;
         }
         
         .mInstruct{
-            margin-top:3rem;
+            margin-top:4rem;
             display:block;
-            text-align:center;
+            text-align:left;
         }
 
         nav ul li{
-            margin-top: 2rem;
-            margin-bottom:2rem;
+            margin:1rem;
         }
         .container{
             padding-top:30rem;
-            margin:0 2rem;
+            margin:0;
+            margin-left:.4rem;
+            margin-right:7rem;
             display:flex;
             flex-direction:row;
             justify-content: center;
@@ -317,17 +324,6 @@ div.intro {
             text-decoration:underline;
         }
 
-        /*
-        div.mobile-instruction{
-            padding-top:5rem;
-            margin:0 2rem;
-            display:flex;
-            flex-direction:row;
-            justify-content: center;
-            text-align:center;
-            z-index:10000000;
-        }*/
-
         .flip_card {
             margin:2rem 2rem;
             margin-bottom:3rem;
@@ -342,59 +338,87 @@ div.intro {
         }
          .flip_card_front:active{
             filter: blur(0) grayscale(0) brightness(90%) saturate(70%);
+        } 
+        .print{
+            width:40%;
+            display:block;
+            scale:70%;
+            opacity:0.5;
+            flex-direction:row;
+            justify-content: center;
+            opacity:0.5;
         }
+
+
         
     }
 
-
-
-
   /* INDEX PAGE STYLING */
   /*TABLE FOR THE SOURCES */
+.tablePage{
+    margin-top:0;
+    padding-top:6rem;
+    width:100%;
+    padding-bottom:0;
+    text-align:center;
+    font-size:1.8rem;
+    color:#6b0000;
+    display:block;
+}
+
+/* for each of the following, creating the same color border*/
 table, td, th {
     border: 1px solid rgba(121, 14, 14, 0.593); /*border for each item in the table--> share same border style*/
   }
 
-  
+  /* positioning and styling the table */ 
   table {
     position: absolute;
-    margin:8rem auto;
+    margin:1rem auto;
     border-collapse: collapse; /*Adjacent cells have shared borders (the collapsed-border table rendering model).*/
     width: 100%;
   }
   
+  /* the title of each column */
   th {
     text-align: left;
     font-size:1.3rem;
     color:#6b0000;
   }
-
+/* the info going in each category of table*/
   td{
     color:#6b0000;
     font-size:1rem;
   }
-
+/* the index number td styling*/
   .indexN{
-    cursor: pointer;
+    text-align: center;
   }
-  /*
-  .card-container{
-    position: absolute;
-    margin:8rem auto;
-    align-items: left;
+/* the title of td styling*/
+  .title{
+    font-size:1rem;
+    text-align: left;
   }
-
-  .cell{
-    width:100%;
-    height:100%;
-    z-index:2;
-    display:flex;
-    flex-direction:column;
-    opacity:100%;
+  /* the comissioner of td styling*/
+  .admin{
+    font-size:.9rem;
   }
-*/
-
+  /* the citation of td styling*/
+  .citation{
+    font-size: .8rem;
+  }
+ 
+/* media queries for mobile view of the Index Page*/
 @media screen and (max-width:768px){
+
+    .tablePage{
+        padding-top:6rem;
+        margin:0;
+        font-size:1.8rem;
+        color:#6b0000;
+        text-align: center;
+        width:100%;
+    }
     th {
         text-align: center;
         font-size:1.2rem;
@@ -408,7 +432,7 @@ table, td, th {
 
 
 /* ABOUT PAGE STYLES*/
-
+/*text description section positioning and styling*/
 .aboutMe{
     display:flex;
     flex-direction:row;
@@ -417,6 +441,7 @@ table, td, th {
     color:#750000;
     padding:10rem 7rem;
 }
+/* header position and specs*/
 .aboutHead{
     display:flex;
     flex-direction: row;
@@ -425,8 +450,10 @@ table, td, th {
     font-size:2rem;
     padding-left:30rem;
     color:#750000;
+    margin-top:0;
 }
 
+/*media queries for mobile of the About Page*/
 @media screen and (max-width:768px){
     .aboutMe{
         display:flex;
@@ -441,6 +468,7 @@ table, td, th {
         padding-top:8rem;
         padding-bottom:1rem;
         padding-left:2rem;
+        margin-top:0;
     }
 }
 
