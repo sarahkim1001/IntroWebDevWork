@@ -1,0 +1,209 @@
+/*Global Styles*/
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=M+PLUS+Code+Latin:wght@100..700&family=Nanum+Myeongjo&family=Nova+Square&family=Syne+Mono&display=swap');
+*{
+    box-sizing:border-box;
+}
+
+
+html, body {
+    height: 100%; 
+    margin: 0;
+    padding: 0; 
+    font-family: "Syne Mono", monospace;
+    background-color: rgb(255, 255, 255);
+    scroll-behavior: smooth;
+}
+
+
+img{
+    width:100%;
+    height: auto;
+}
+
+
+#border {
+    position: fixed;  
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: 10px solid rgb(63, 10, 10);
+    box-sizing: border-box;
+    z-index: 1000; 
+    pointer-events: none;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.505), rgba(64, 70, 84, 0.216));
+    box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.664);
+}
+
+.current a{
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+
+}
+
+.title{
+    width:35%;
+    display:block;
+    margin-top:1.4rem;
+    margin-left:0;
+}
+
+div.title a{
+    margin-left:2rem;
+    margin-top:2rem;
+    font-size:8rem;
+    color:rgba(69, 104, 138, 0.119);
+    transition: all 7s ease;
+    --shadow-blur: 20px;
+    text-shadow: 0px 0px var(--shadow-blur);
+}
+div.title a:hover{
+    color:rgb(13, 35, 58);
+}
+
+html body .title.wow .myName a {
+    color:rgba(195, 193, 193, 0.802);
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+   /* color: rgba(207, 207, 207, 0.623);*/
+    scale:1;
+    opacity:1;
+    --shadow-blur: 30px;
+    text-shadow: 0px 0px var(--shadow-blur);
+
+}
+
+.sideNav {
+    opacity:1;
+    position: fixed;
+    top: 2rem;                      
+    left: 1rem;                     
+    width: 200px;                
+    height: 100vh;               
+    overflow-y: auto;            
+    z-index: 100;                
+    margin-top: 0;              
+}
+
+
+
+.info{
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: rgba(47, 97, 144, 0.447);
+    text-decoration-style:dotted;
+}
+
+a{
+    position:relative;
+    font-size:.9rem;
+    text-decoration:none;
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    /*color:rgba(255, 255, 255, 0.833);*/
+    transition: all .7s ease-in-out;
+    line-height:1.5rem;
+    scale:1;
+}
+
+
+a:hover{
+    color:rgb(0, 0, 0);
+    text-shadow: none;
+    
+}
+
+li{
+    list-style-type: none;
+}
+
+
+h3{
+    font-size:1.1rem;
+    margin:.9rem;
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    
+}
+
+.stuffContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:6rem;
+    margin-left:15vw;
+    width:70vw;
+    justify-content: center; 
+}
+
+div.stuffItem {
+    flex: 1 0 auto; 
+    width: 30%; 
+    max-width: 200px;
+    margin:0rem 2rem; 
+    border:none;
+    background-color: transparent;
+}
+
+.galItem{
+    margin:1rem;
+
+}
+
+.folderThing{
+    overflow:visible;
+}
+
+
+div.folderThing div p{
+    font-size:.75rem;
+}
+div.folderThing div.galItem{
+    margin:4rem auto; 
+}
+
+
+.pageTitle{
+    font-size:.8rem;
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-end;
+    margin-right:20%;
+    top:10%;
+}
+@media screen and (max-width:768px){
+    .sideBar{
+        margin-left:0;
+        position:absolute;
+        line-height:.2rem;
+        margin-top:0;
+        text-decoration-thickness: 1px;
+        text-decoration-color: rgb(64, 62, 62);
+        text-decoration-style:dotted;
+    }
+    .seriesItem{
+        margin-left:0;
+
+    }
+
+}
+
+
+/*Interact1 Page*/
+
+
+#interactObj1 {
+    position: relative; 
+    z-index:995;
+    position:relative;
+    top:20%;
+    margin:0 auto;
+    display:flex;
+    flex-direction:row;
+    background-color: transparent; 
+    overflow:hidden;
+    background-color: grey;
+}

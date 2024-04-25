@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HomePage</title>
+
+    <!--<style type="text/css" media="screen">
+    </style>
+    -->
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+  </head>
+  <body>
+    <div class="title">
+        <li class="myName"><a href='../index.html'>Sarah S. KIM</a></li>
+    </div>
+    <div class="pageTitle" id="pageTitle">
+        <h2>WHERE THE WIND BLOWS</h2>
+    </div>
+
+    <div class="stuffContainer" id="stuffContainer">
+        <div class="folderThing" id="folderThing">
+            <div class="galItem" id="galItem1">
+                <img src="../img/paper.jpg" style="width:400px;height:300px;">
+                <p>Project Title (date) description ... lorem ipsum blah  </p>
+            </div>
+            <div class="galItem" id="galItem2">
+                <img src="../img/paper.jpg" style="width:400px;height:300px;">
+                <p>Project Title (date) description ... lorem ipsum blah  </p>
+            </div>
+            <div class="galItem" id="galItem3">
+                <img src="../img/paper.jpg" style="width:400px;height:300px;">
+                <p>Project Title (date) description ... lorem ipsum blah  </p>
+            </div>
+            <div class="galItem" id="galItem4">
+                <img src="../img/paper.jpg" style="width:400px;height:300px;">
+                <p>Project Title (date) description ... lorem ipsum blah  </p>
+            </div>   
+        </div> 
+    </div>
+    <div class="sideNav">
+        <div class="series"> 
+            <h3>series</h3>
+             <ul>
+                <li class="seriesItem" ><a href="../constructs/index.html">constructs</a></li>
+                <li class="seriesItem"><a href="../fragmentation/index.html">fragmentation</a></li>
+                <li class="seriesItem"><a href="../frame/index.html">game of frames</a></li>
+                <li class="seriesItem" ><a href="../continuity/index.html">continuity</a></li>
+                <li class="seriesItem"><a href="../absurd/index.html">the Absurd</a></li>
+                <li class="seriesItem"><a href="../return/index.html">return to sender</a></li>
+                <li class="seriesItem"><a href="../semimani/index.html">semiotic manipulation</a></li>
+                <li class="seriesItem"><a href="../postmodern/index.html">symptoms of the postmodern paradox</a></li>
+                <li class="seriesItem"><a href="../distallation/index.html">distillation</a></li>
+                <li class="current seriesItem"><a href="./index.html">where the wind blows</a></li>
+                
+             </ul>
+        </div>
+        <div class="projects">
+            <h3>works</h3>
+            <ul>
+                <li class="projectsItem"><a href="../sound/index.html">echos, aurality</a></li>
+                <li class="projectsItem"><a href="../userD/index.html">user illision</a></li>
+                <li class="projectsItem"><a href="#">written word</a></li>
+            </ul>
+        </div>
+        <div class="noCat">
+            <h3>interact</h3>
+            <ul>
+                <li ><a href="../interact1/index.html">untitled_1</a></li>
+                <li ><a href="../interact2/index.html">untitled_2</a></li>
+                <li ><a href="../interact3/index.html">untitled_3</a></li>
+                <li ><a href="../interact4/index.html">untitled_4</a></li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <ul>
+                <li ><a href="../about/index.html">about</a></li>
+                <li ><a href="../contact/index.html">contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="border"></div>
+
+    <!-- Start writing your HTML elments here -->
+    
+
+
+
+
+    <!-- Load GSAP core library at the bottom of our body tag -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <!-- Our Script using GSAP Library Functions -->
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+           const bord = document.getElementById('border');
+           gsap.from(bord, {
+           duration: 2,
+           scale:1.01,  
+           opacity: 0,
+           ease: "slow"
+           });
+        
+           const pt = document.getElementsByClassName('pageTitle');
+                gsap.from(pt, {
+                duration: 2,
+                opacity: 0,
+                delay:2,
+                ease: "power1.inOut" 
+                });
+                
+           document.querySelectorAll('.galItem').forEach(function(item) {
+        
+                    gsap.from(item, {
+                        x: 0, 
+                        y: -2000,
+                        opacity:0,
+                        'overflow':'visible',
+                        duration: 6 + Math.random() * 0.5,  
+                        ease: "back.out(.8)",  
+                        clearProps: "all"  
+                    });
+                });
+       });
+    </script>
+  </body>
+</html>
