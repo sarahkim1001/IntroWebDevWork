@@ -16,6 +16,10 @@
     <div class="title">
         <li class="myName"><a href='../index.html'>Sarah S. KIM</a></li>
     </div>
+
+    <div class="pageTitle" id="pageTitle">
+        <h2>ABOUT SARAH KIM </h2>
+    </div>
     
     <div class="sideNav">
         <div class="series"> 
@@ -79,6 +83,14 @@
            opacity: 0,
            ease: "slow"
            });
+
+           const pt = document.getElementsByClassName('pageTitle');
+                gsap.from(pt, {
+                duration: 4,
+                opacity: 0,
+                delay:0.1,
+                ease: "power1.inOut" 
+                });
        });
 
 

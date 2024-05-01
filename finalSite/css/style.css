@@ -1,17 +1,32 @@
 /*Global Styles*/
 @import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=M+PLUS+Code+Latin:wght@100..700&family=Nanum+Myeongjo&family=Nova+Square&family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Jacquard+12+Charted&family=Jacquarda+Bastarda+9+Charted&family=Jersey+15+Charted&family=M+PLUS+Code+Latin:wght@100..700&family=Nanum+Myeongjo&family=Nova+Square&family=Syne+Mono&display=swap');
 *{
     box-sizing:border-box;
 }
-
 
 html, body {
     height: 100%; 
     margin: 0;
     padding: 0; 
     font-family: "Syne Mono", monospace;
-    background-color: rgb(255, 255, 255);
     scroll-behavior: smooth;
+}
+
+/*themeStyling*/
+.selectTheme{
+    position:fixed;
+    width:97%;
+    margin-top:1rem;
+    display:flex;
+    flex-direction:row;
+    font-size:.75rem;
+    justify-content:flex-end;
+}
+
+#specifyColor {
+    accent-color: rgba(192, 192, 192, 0.694);
+    border:grey;
 }
 
 
@@ -19,7 +34,6 @@ img{
     width:100%;
     height: auto;
 }
-
 
 #border {
     position: fixed;  
@@ -32,9 +46,11 @@ img{
     box-sizing: border-box;
     z-index: 1000; 
     pointer-events: none;
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.505), rgba(64, 70, 84, 0.216));
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.047), rgba(24, 25, 30, 0.237));
     box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.664);
 }
+
+
 
 .current a{
     color:rgb(255, 255, 255);
@@ -45,16 +61,15 @@ img{
 }
 
 .title{
-    width:35%;
+   /* width:35%;*/
     display:block;
-    margin-top:1.4rem;
-    margin-left:0;
+    margin-top:1.5rem;
+    margin-left:1rem;
+    font-family: "Jacquarda Bastarda 9 Charted", serif;
 }
 
 div.title a{
-    margin-left:2rem;
-    margin-top:2rem;
-    font-size:8rem;
+    font-size:3rem;
     color:rgba(69, 104, 138, 0.119);
     transition: all 7s ease;
     --shadow-blur: 20px;
@@ -65,14 +80,16 @@ div.title a:hover{
 }
 
 html body .title.wow .myName a {
-    color:rgba(195, 193, 193, 0.802);
-    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+    color:rgba(209, 208, 208, 0.802);
+    transition: all 5 ease;
    /* color: rgba(207, 207, 207, 0.623);*/
     scale:1;
     opacity:1;
     --shadow-blur: 30px;
     text-shadow: 0px 0px var(--shadow-blur);
-
+}
+html body .title.wow .myName a:hover{
+    color:white;
 }
 
 .sideNav {
@@ -103,15 +120,15 @@ a{
     color:rgb(255, 255, 255);
     text-shadow: 1px 1px 2px rgb(0, 0, 0);
     /*color:rgba(255, 255, 255, 0.833);*/
-    transition: all .7s ease-in-out;
+    transition: all 1s ease-in-out;
     line-height:1.5rem;
     scale:1;
 }
 
 
 a:hover{
-    color:rgb(0, 0, 0);
-    text-shadow: none;
+    color:rgb(5, 15, 46);
+    text-shadow: 1px 1px 4px rgba(36, 36, 36, 0.315);
     
 }
 
@@ -124,7 +141,7 @@ h3{
     font-size:1.1rem;
     margin:.9rem;
     color:rgb(255, 255, 255);
-    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
     
 }
 
@@ -132,9 +149,11 @@ h3{
     display: flex;
     flex-wrap: wrap;
     margin-top:6rem;
-    margin-left:15vw;
+    margin-left:18vw;
     width:70vw;
     justify-content: center; 
+    align-items:flex-end;
+    margin-bottom:4rem;
 }
 
 div.stuffItem {
@@ -144,12 +163,32 @@ div.stuffItem {
     margin:0rem 2rem; 
     border:none;
     background-color: transparent;
+   
 }
 
+div.stuffItem p{
+    font-size: .75rem;
+    color:rgb(148, 148, 148);
+}
+div.stuffItem h1{
+    font-size:1rem;
+    color:rgb(148, 148, 148);
+}
+
+.specialCollage{
+    display:block;
+}
+.collageItem{
+    margin:1rem 1rem;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.655);
+    background-color: black;
+}
+
+
+/*
 .galItem{
     margin:1rem;
-
-}
+}*/
 
 .folderThing{
     overflow:visible;
@@ -206,4 +245,117 @@ div.folderThing div.galItem{
     background-color: transparent; 
     overflow:hidden;
     background-color: grey;
+}
+
+/* Contact Pages Styles */
+
+#contactForm {
+    position: relative;
+    margin-left:32vw;
+    margin-top:0;
+    margin-bottom:2rem;
+    width: 500px;       
+    height: 600px;       
+    background-color:rgba(3, 11, 36, 0.683);
+    border-top-style:dotted;
+    border-top-color:white;
+    scale:1;
+}
+
+.form-content {
+    position: absolute; 
+    top: 0;              
+    left: 0;            
+    width: 100%;        
+    height: 100%;       
+    display: flex;      
+    flex-direction: column; 
+    align-items:flex-start; 
+    justify-content: center;
+    padding: 20px;       
+    box-sizing: border-box; 
+}
+
+.inputContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+label.dearSarah{
+    justify-content:flex-start;
+    margin-top:2rem;
+    align-items:left;
+    text-align: left;
+    color:rgb(30, 31, 31);
+    text-shadow: 1px 1px 4px rgba(71, 70, 70, 0.268);
+}
+
+.text-area, .writeHere {
+    background-color:transparent;
+    border-color:white;
+    border-style: dashed;
+    width: 95%;          
+    height: 60%;       
+    margin: 2rem 0;     
+    color:rgb(0, 0, 0);
+    text-shadow: 1px 1px 4px rgba(71, 70, 70, 0.268); 
+}
+input{
+    border:1px;
+    border-style: dashed;
+    border-color:white;
+    margin:.75rem;
+    height:1.5rem;
+    background-color:transparent
+ }
+
+.emailInput{
+    align-items:flex-end;
+    justify-content: flex-end;
+}
+input[type="submit"] {
+    margin-top: 10px;    
+}
+
+.inputContainer{
+    margin-top:1.5rem;
+}
+
+
+.contactBox{
+    position:fixed;
+    margin-left:80vw;
+    margin-top:60vh;
+    text-align: center;
+    line-height:1.4rem;
+    font-size: .9rem;
+    color:rgb(149, 149, 149);
+    opacity:1;
+    text-align:justify;
+}
+
+.buttonStyled{
+    background-color:transparent;
+    border-color: white;
+    text-decoration:none;
+    font-size:.9rem;
+    text-align: right;
+    justify-content:flex-end;
+    color:rgb(30, 31, 31);
+    text-shadow: 1px 1px 4px rgba(71, 70, 70, 0.268);
+}
+
+#datetime{
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.655);
+    margin:2px 2px;
+}
+
+#againBtn{
+    position: relative;
+    margin-left:32vw;
+    background-color:rgba(3, 11, 36, 0.683);
+    visibility: hidden;
 }

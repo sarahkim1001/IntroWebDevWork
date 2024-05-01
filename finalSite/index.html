@@ -7,17 +7,41 @@
 
   
     <link rel="stylesheet" href="./css/style.css" />
+    <style>
+        #border {    
+        background-image: radial-gradient(circle, rgba(255, 255, 255, 0.074), rgba(0, 0, 0, 0.226));
+        }
+
+    </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="sketch.js"></script>
+    <script src="./jsFooter/sketch.js"></script>
 
   </head>
   <body>
+    <div class="p5footer">
+        <div class="p5draw" id="p5draw"></div>
+    </div>
+
+    <div class="selectTheme">
+        <form>
+            <!--Radio Group for which mode-->
+                <label><input type="radio"id="specifyColor" name="colorTheme" value="dark" checked>light</label> <!--use radio groups if only one can be checked-->
+                <label><input type="radio" id="specifyColor"name="colorTheme" value="light">dark</label>
+                <label><input type="radio" id="specifyColor"name="colorTheme" value="grey" >grey</label>
+            </form>
+    </div>
    
 
     <div class="title wow" id="title">
         <li class="myName" id="myName"><a href='./index.html'>Sarah S. KIM</a></li>
     </div>
 
+    <div class="lines">
+        <div class="lines1"></div>
+        <div class="lines2"></div>
+        <div class="lines3"></div>
+        <div class="lines4"></div>
+    </div>
     <div class="stuffContainer" id="stuffContainer">
             <div class="stuffItem galItem" id="stuffItem">
                 <img src="img/paper.jpg" style="width:400px;height:300px;">
@@ -32,22 +56,62 @@
                 <img src="img/copperPol.png" style="width:300px;height:250px;">
             </div>
             <div class="stuffItem galItem" id="stuffItem">
-                <img src="img/jelly.jpg" style="width:410px;height:340px;">
+                <img src="img/invert.png" style="width:120px;height:210px;">
+            </div>  
+            <div class="stuffItem galItem" id="stuffItem">
+                <img src="img/jelly.jpg" style="width:320px;height:450px;">
+            </div>
+            <div class="stuffItem specialCollage" id="stuffItem">
+                <div class="galItem collageItem">
+                    <img src="img/followLight.jpg" style="width:50px;height:50px;">
+                </div>
+                <div class="galItem collageItem">
+                    <img src="img/contrast.JPG" style="width:50px;height:50px;">
+                </div>
+                <div class="galItem collageItem">
+                    <img src="img/tasteIt.png" style="width:50px;height:50px;">
+                </div>
+                <div class="galItem collageItem">
+                    <img src="img/forrest2.png" style="width:50px;height:50px;">
+                </div>
+                <div class="galItem collageItem">
+                    <img src="img/fire.JPG" style="width:50px;height:50px;">
+                </div>
+                <div class="galItem collageItem">
+                    <img src="img/gravity.JPG" style="width:50px;height:50px;">
+                </div>
+                <div class="galItem collageItem">
+                    <img src="img/waves.jpg" style="width:50px;height:50px;">
+                </div>
+                <div class="galItem collageItem">
+                    <img src="img/growth.png" style="width:50px;height:50px;">
+                </div>
+                <div class="galItem collageItem">
+                    <img src="img/skyblue.png" style="width:50px;height:50px;">
+                </div>
+            </div>
+            <div class="stuffItem galItem" id="stuffItem">
+                <h1>here</h1>
+                <p>     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc neque sem, blandit eu lorem id, ullamcorper consequat felis. Etiam facilisis, mi blandit pretium congue, nibh justo venenatis risus, id pellentesque lectus sem in ex. Suspendisse quis felis tincidunt, laoreet odio ut, efficitur ex. Donec tortor odio, sollicitudin sed ante vel, mattis vestibulum lectus. Integer auctor, velit at vehicula faucibus, ipsum libero sollicitudin dui,    sed fringilla nulla sem et turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin a lectus non metus pretium tempor. Mauris et faucibus sapien. </p>
             </div>
             <div class="stuffItem galItem" id="stuffItem">
                 <img src="img/blackness.png" style="width:380px;height:470px;">
             </div>
-    
-        
             <div class="stuffItem galItem" id="stuffItem">
-                <img src="img/flory.png" style="width:580px;height:440px;">
-            </div>    
-            <div class="stuffItem galItem" id="stuffItem">
-                <img src="img/iminit.png" style="width:270px;height:340px;">
+                <h1>now</h1>
+                <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc neque sem, blandit eu lorem id, ullamcorper consequat felis. Etiam facilisis, mi blandit pretium congue, nibh justo venenatis risus, id pellentesque lectus sem in ex. Suspendisse quis felis tincidunt, laoreet odio ut, efficitur ex. Donec tortor odio, sollicitudin sed ante vel, mattis vestibulum lectus. </p>
             </div>
             <div class="stuffItem galItem" id="stuffItem">
-                <img src="img/barren.png" style="width:270px;height:340px;">
+                <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc neque sem, blandit eu lorem id, ullamcorper consequat felis. Etiam facilisis, mi blandit pretium congue, nibh justo venenatis risus, id pellentesque lectus sem in ex. Suspendisse quis felis tincidunt, laoreet odio ut, efficitur ex. Donec tortor odio, sollicitudin sed ante vel, mattis vestibulum lectus. Integer auctor, velit at vehicula faucibus, ipsum libero sollicitudin dui, sed fringilla nulla sem et turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin a lectus non metus pretium tempor.    Mauris et faucibus sapien.Nunc neque sem, blandit eu lorem id, ullamcorper c. </p>
             </div>
+            <div class="stuffItem galItem" id="stuffItem">
+                <p>   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc neque sem, blandit eu lorem id, ullamcorper consequat felis. Etiam facilisis, mi blandit pretium congue, nibh justo venenatis risus, id pellentesque lectus sem in ex.    Suspendisse quis felis tincidunt, laoreet odio ut, efficitur ex. Donec tortor odio, sollicitudin sed ante vel, mattis vestibulum lectus. Integer auctor, velit at vehicula faucibus, ipsum libero sollicitudin dui, sed fringilla nulla sem et turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin a lectus non metus pretium tempor. Mauris et faucibus sapien.Nunc neque sem blandit pretium congue, nibh justo venenatis risus, id pellentesque lectus sem in ex.. </p>
+            </div>
+            
+            <div class="stuffItem galItem" id="stuffItem">
+                <img src="img/bookedLife.png" style="width:500px;height:650px;">
+            </div> 
+           
     </div>
     
     <div class="sideNav" id="navBar">
@@ -102,9 +166,16 @@
     <!-- Our Script using GSAP Library Functions -->
     <script type="text/javascript">
        document.addEventListener('DOMContentLoaded', function() {
-           
+        
+            const ts= document.getElementsByClassName('selectTheme')
+            gsap.from(ts, {
+                duration:2,
+                delay:2,
+                opacity:0,
+                ease: 'power1.out'
+            })
+            
             const mn = document.getElementById('myName');
-
             gsap.from(mn, {
             duration: 3.1,            
             x: '-70%',  
@@ -117,7 +188,7 @@
             gsap.from(mn,{
                 duration:3,
                 opacity:0,
-                delay:3,
+                delay:2,
                 ease: "power1.inOut" 
             });
 
@@ -125,7 +196,6 @@
             gsap.to(mn, {duration: 1.7,ease: "power4.out","--shadow-blur": "0px",});
 
             const nav= document.getElementById('navBar');
-
             gsap.from(nav, {
             duration: 3,              
             opacity: 0,
@@ -150,12 +220,8 @@
             ease: "slow"
             });
 
-
-
             document.querySelectorAll('.galItem').forEach(function(item) {
-        
                     const randomStartX = Math.random() * window.innerWidth;
-
                     gsap.from(item, {
                         x: randomStartX - item.getBoundingClientRect().left,  
                         y: -1000,
@@ -164,20 +230,11 @@
                         duration: 8 + Math.random() * 0.5,  
                         ease: "expo.out",  
                         delay:.25,
-                        opacity:0
-                        
+                        opacity:0      
                     });
-            
-
         });
-
-        });
-
-        
+        });   
     </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="./jsHome/sketch.js"></script>
 
 
   </body>

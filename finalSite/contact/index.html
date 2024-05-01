@@ -11,10 +11,22 @@
 
     <link rel="stylesheet" href="../css/style.css" />
 
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="../jsFooter/sketch.js"></script>
+
   </head>
   <body>
+    
+    <div class="p5footer">
+        <div class="p5draw" id="p5draw"></div>
+    </div>
     <div class="title">
         <li class="myName"><a href='../index.html'>Sarah S. KIM</a></li>
+    </div>
+
+    <div class="pageTitle" id="pageTitle">
+        <h2>GET IN TOUCH</h2>
     </div>
     
     <div class="sideNav">
@@ -61,18 +73,47 @@
     </div>
 
     <div id="border"></div>
+   
+    <div class="contactBox genericAfter" id="contactBox">
+        <p>mobile: +1 650 924 5977</p>
+        <p>email: sarahkim1001@gmail.com</p>
+        
+
+    </div>
+
+    <div class="contactForm generic" id="contactForm">
+        <span id="datetime"></span>
+        <img src="../img/paper.jpg" class='contactImg' alt="Background paper" style="width:500px;height:600px;">
+        <form class="form-content" action="" method="POST"> <!--where the form goes/ location of the end point that proccess the form-->
+
+            <div class="inputContainer">
+                <div class="nameContact">
+                    <label for="name" class="zeName">your name: </label>
+                    <input type="text" class="nameInput" name="name" aria-label="First name" required>
+                </div>
+                <div class="emailContact">
+                    <label for="email" class="zeEmail">your email: </label>
+                    <input type="email" class="emailInput" name="email" aria-label="Email Address" required>
+                 </div>
+            </div>
+
+            <label for="writeHere" class="dearSarah">Dear Sarah,</label>
+            <textarea class="writeHere" name="writeHere" id="writeHere" placeholder="Start writing here..."></textarea> <!--need to cahnge name from writeHere to "message"-->
+            <input type="submit" class='buttonStyled' value="send." id="sendMe" required></input>
+        </form>
+    </div>
+
+
+   <button type="button" id="againBtn">write another message</button>
 
     
     <!-- Start writing your HTML elments here -->
     
-
-
-
-
     <!-- Load GSAP core library at the bottom of our body tag -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <!-- Our Script using GSAP Library Functions -->
     <script type="text/javascript">
+
         document.addEventListener('DOMContentLoaded', function() {
            const bord = document.getElementById('border');
            gsap.from(bord, {
@@ -81,8 +122,49 @@
            opacity: 0,
            ease: "slow"
            });
-       });
+           const pt = document.getElementsByClassName('pageTitle');
+                gsap.from(pt, {
+                duration: 4,
+                opacity: 0,
+                delay:0.1,
+                ease: "power1.inOut" 
+                });
+            const generic = document.getElementsByClassName('generic');
+                gsap.from(generic, {
+                duration: 2,
+                opacity: 0,
+                ease: "power1.inOut" 
+                });
+                gsap.from(generic,{
+                    duration:4,
+                    y:-1000,
+                    ease: "back.out(.8)"
+                });
+            const genericAfter = document.getElementsByClassName('genericAfter');
+                gsap.from(genericAfter, {
+                duration: 2,
+                opacity: .25,
+                delay:2,
+                brightness:0,
+                ease: "power1.inOut" 
+                });
 
+            function updateDateTime() {
+            const now = new Date();
+            const currentDateTime = now.toLocaleString();
+            document.querySelector('#datetime').textContent = currentDateTime;
+            }
+            setInterval(updateDateTime, 1000);
+
+            document.getElementById('sendMe').addEventListener('click', function(e){
+                e.preventDefault();
+                cf= document.getElementById('contactForm')
+                gsap.to(cf,{y:1000, duration:4, ease: 'power1.inOut'})
+                gsap.to(cf, {opacity:0, delay:3, duration:4.5, scale: .10, y:900, rotation:30, ease: 'power1.inOut'})
+                //window.scrollTo(0,1600)//
+            })
+
+            });
     </script>
   </body>
 </html>

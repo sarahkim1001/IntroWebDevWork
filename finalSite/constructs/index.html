@@ -8,13 +8,20 @@
    
 
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="../jsFooter/sketch.js"></script>
 
   </head>
   <body>
-    
+    <div class="p5footer">
+        <div class="p5draw" id="p5draw"></div>
+    </div>
+
     <div class="title">
         <li class="myName"><a href='../index.html'>Sarah S. KIM</a></li>
     </div>
+
+    <div id="border"></div>
 
     <div class="pageTitle" id="pageTitle">
         <h2>CONSTRUCTS</h2>
@@ -26,7 +33,7 @@
                 <img src="../img/paper.jpg" style="width:400px;height:300px;">
                 <p>Project Title (date) description ... lorem ipsum blah  </p>
             </div>
-            <div class="galItem" id="galItem2">
+            <div class="galItem" id="galItem1">
                 <img src="../img/paper.jpg" style="width:400px;height:300px;">
                 <p>Project Title (date) description ... lorem ipsum blah  </p>
             </div>
@@ -40,7 +47,6 @@
             </div>   
         </div> 
     </div>
-    
     
     <div class="sideNav" id="navBar">
         <div class="series"> 
@@ -84,8 +90,6 @@
             </ul>
         </div>
     </div>
-
-    <div id="border"></div>
   
     
 
@@ -112,10 +116,7 @@
                 ease: "power1.inOut" 
                 });
 
-
                 document.querySelectorAll('.galItem').forEach(function(item) {
-       
-
                     gsap.from(item, {
                         x: 0,  
                         y: -2000,
@@ -126,10 +127,7 @@
                         clearProps: "all" 
                     });
                 });
-
-
         });
-        
 
     </script>
   </body>
