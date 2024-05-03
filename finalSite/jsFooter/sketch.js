@@ -2,7 +2,7 @@ let rains= [];
 
 
 function setup(){ // SETUP FUNCTION
-    createCanvas(windowWidth*2,windowHeight*2);
+    createCanvas(windowWidth*1.5,windowHeight*1.5);
     
     for(let i=0; i<200; i++){ // conditions for the rain instance 
         let x= random(width);

@@ -50,8 +50,11 @@
                 <img src="img/photoFrame.png" style="width:140px;height:175px;">
             </div>
             <div class="stuffItem galItem" id="stuffItem">
-                <img src="img/flowerPol.png" style="width:140px;height:175px;">
+                <img src="img/birds111.png" style="width:90px;height:90px;">
             </div>
+            <div class="stuffItem galItem" id="stuffItem">
+                <img src="img/flowerPol.png" style="width:140px;height:175px;">
+            </div> 
             <div class="stuffItem galItem" id="stuffItem">
                 <img src="img/copperPol.png" style="width:300px;height:250px;">
             </div>
@@ -90,6 +93,84 @@
                     <img src="img/skyblue.png" style="width:50px;height:50px;">
                 </div>
             </div>
+           <!-- <div class="stuffItem galItem" id="stuffItem">
+                <img src="img/BladeRunnerTree3.png" style="width:320px;height:450px;">
+            </div>-->
+        
+           
+            <div class="stuffItem specialCollage2" id="stuffItem">
+                <div class="galItem collageItem3">
+                    <img src="img/1.png" style="width:20px;height:20px;">
+                </div>
+                <div class="galItem collageItem3">
+                    <img src="img/2.png" style="width:20px;height:20px;">
+                </div>
+                <div class="galItem collageItem3">
+                    <img src="img/14.png" style="width:20px;height:20px;">
+                </div>
+                <div class="galItem collageItem3">
+                    <img src="img/15.png" style="width:20px;height:20px;">
+                </div>
+                <div class="galItem collageItem3">
+                    <img src="img/4.png" style="width:20px;height:20px;">
+                </div>
+                <div class="galItem collageItem3">
+                    <img src="img/8.png" style="width:20px;height:20px;">
+                </div>
+                <div class="galItem collageItem3">
+                    <img src="img/10.png" style="width:20px;height:20px;">
+                </div>
+            </div>
+
+            <div class="stuffItem specialCollage3" id="stuffItem">
+                <div class="galItem collageItem3">
+                    <img src="img/2.png" style="width:20px;height:20px;">
+                </div>
+                <div class="galItem collageItem3">
+                    <img src="img/1.png" style="width:20px;height:20px;">
+                </div>
+                <div class="galItem collageItem3">
+                    <img src="img/15.png" style="width:20px;height:20px;">
+                </div>
+                <div class="galItem collageItem3">
+                    <img src="img/14.png" style="width:20px;height:20px;">
+                </div>
+                <div class="galItem collageItem3">
+                    <img src="img/4.png" style="width:20px;height:20px;">
+                </div>
+                <div class="galItem collageItem3">
+                    <img src="img/2.png" style="width:20px;height:20px;">
+                </div>
+                <div class="galItem collageItem3">
+                    <img src="img/1.png" style="width:20px;height:20px;">
+                </div>
+                <div class="galItem collageItem3">
+                    <img src="img/2.png" style="width:20px;height:20px;">
+                </div><div class="galItem collageItem3">
+                    <img src="img/1.png" style="width:20px;height:20px;">
+                </div>
+                <div class="galItem collageItem3">
+                    <img src="img/1.png" style="width:20px;height:20px;">
+                </div>
+                <div class="galItem collageItem3">
+                    <img src="img/1.png" style="width:20px;height:20px;">
+                </div>
+                <div class="galItem collageItem3">
+                    <img src="img/1.png" style="width:20px;height:20px;">
+                </div>
+                <div class="galItem collageItem3">
+                    <p>hello darkness my old friend...</p>
+                </div>
+                
+            </div>
+
+
+
+
+
+
+
+
             <div class="stuffItem galItem" id="stuffItem">
                 <h1>here</h1>
                 <p>     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc neque sem, blandit eu lorem id, ullamcorper consequat felis. Etiam facilisis, mi blandit pretium congue, nibh justo venenatis risus, id pellentesque lectus sem in ex. Suspendisse quis felis tincidunt, laoreet odio ut, efficitur ex. Donec tortor odio, sollicitudin sed ante vel, mattis vestibulum lectus. Integer auctor, velit at vehicula faucibus, ipsum libero sollicitudin dui,    sed fringilla nulla sem et turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin a lectus non metus pretium tempor. Mauris et faucibus sapien. </p>
@@ -107,7 +188,6 @@
             <div class="stuffItem galItem" id="stuffItem">
                 <p>   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc neque sem, blandit eu lorem id, ullamcorper consequat felis. Etiam facilisis, mi blandit pretium congue, nibh justo venenatis risus, id pellentesque lectus sem in ex.    Suspendisse quis felis tincidunt, laoreet odio ut, efficitur ex. Donec tortor odio, sollicitudin sed ante vel, mattis vestibulum lectus. Integer auctor, velit at vehicula faucibus, ipsum libero sollicitudin dui, sed fringilla nulla sem et turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin a lectus non metus pretium tempor. Mauris et faucibus sapien.Nunc neque sem blandit pretium congue, nibh justo venenatis risus, id pellentesque lectus sem in ex.. </p>
             </div>
-            
             <div class="stuffItem galItem" id="stuffItem">
                 <img src="img/bookedLife.png" style="width:500px;height:650px;">
             </div> 
@@ -158,6 +238,7 @@
     </div>
 
     <div id="border"></div>
+    <div id="overlay"></div>
    
 
     <!-- Start writing your HTML elments here -->
@@ -166,6 +247,15 @@
     <!-- Our Script using GSAP Library Functions -->
     <script type="text/javascript">
        document.addEventListener('DOMContentLoaded', function() {
+            gsap.to("#overlay", {
+            duration: 10, 
+            opacity: 0,
+            ease: "expoScale(0.5,7,none)",
+            onComplete: function() {
+                document.getElementById('overlay').style.display = 'none';
+            }
+        });
+
         
             const ts= document.getElementsByClassName('selectTheme')
             gsap.from(ts, {
@@ -208,6 +298,7 @@
             duration: 4,
             x:-1000,
             y:-380,
+            delay:2,
             scale:0.1,  
             ease: "slow"
             });
@@ -216,9 +307,11 @@
             gsap.from(bordyay, {
             duration: 4,
             opacity:0,
-            delay:.1,
+            delay:3,
             ease: "slow"
             });
+
+            
 
             document.querySelectorAll('.galItem').forEach(function(item) {
                     const randomStartX = Math.random() * window.innerWidth;
