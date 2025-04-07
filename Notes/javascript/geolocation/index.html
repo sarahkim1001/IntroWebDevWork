@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Geolocation</title>
+    <script type="text/javascript">
+        let loc
+        document.addEventListener('DOMContentLoaded', () => {
+            loc= document.getElementById('location')
+            getLocation()
+        })
+
+        // function getLocatino(){} --> same as the one below, below is an array function
+        const getLocation = () =>{
+            //check if your browser supports geolocation (if the two conditions below exists) 
+            if (navigator.geolocation && navigator.geolocation.getCurrentPosition){
+                //geolocation and so does the function we need to call to find the current location 
+                navigator.geolocation.getCurrentPosition(setPosition, showErrors)
+                //returns geolocation position object and will return to the setPosition function callback 
+            }else{
+                //no gelocation, we should display some sort of message to the user 
+                alert('Your browser does not support geolocation')
+            }
+        }
+
+        const setPosition =(position)=>{  
+            console.log(position.coords.lattitude)
+            console.log(position.coords.longitude)
+
+            const lat = position.coords.lattitude
+            const lon = position.coords.longitude
+            const loc = document.getElementById('location')
+
+            loc.innerHTML =  `<p>Lattitude: ${lat} <br/> Longitude: ${lon} </p>`
+        }
+
+        const showErrors =(error)=>{
+            console.log(error)
+            switch(error.code){
+                case error.PERMISSION_DENIED:
+                    loc.innerHTML ='User denied the request for geolocation'
+                    break 
+                case error.POSITION_UNAVAILABLE:
+                    loc.innerHTML ='Location information is unavaiable'
+                    
+
+
+            }
+        }
+
+    </script>
+  </head>
+  <body>
+
+    <div id="location">
+      <p>Currently searching for location...</p>
+    </div>
+
+  </body>
+</html>
+

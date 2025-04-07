@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Intro to CSS Text and Spans</title>
+
+    <!-- internal style sheet, these styles only apply to this file-->
+    <style type= "text/css">
+/*importing font via import and copy paste here without the style tag*/
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+/* univeral selector*/
+        *{
+            margin: 0;
+        }
+
+/* tag/element/type selector*/
+        h1{
+            /* apply one side at a time indiviudually*/
+            margin-top: 1em; 
+            /* 2 valyes means top/bottom and left/right*/
+            margin: 1em 0.5 em;
+            /*4 values starts at the top then goes clockwise*/
+            margin: 2em 0.5em 1em 0.5em; 
+            /*will inherit the last code */
+            font-family: Helvetica, Arial, sans-serif;
+            text-shadow: 2px 2px 10px blue;
+            font-weight: 200;
+        }
+/*for the paragrraph specs*/
+        p{
+            margin: 0.5em 0;
+            line-height: 1.3;
+            /*line up line hieght and forum input*/ 
+        }
+
+        a{
+            color: violet;
+        }
+
+    .silly_font{ 
+        font-family: fantasy;
+        color: green;
+    }
+
+    /*this is an ID- one instance of unique ID per page*/
+    #important_text{
+        font-family: 'EB Garamond, sans-serif';
+        font-weight: 200;
+        text-transform: capitalize;
+    }
+
+    /*descendant slector looking for only the a tags inside p tags*/ 
+    p a {
+        color: rgba(42, 101, 108, 0.642)
+    }
+
+
+    </style>
+    
+  </head>
+  <body>
+    <h1>Heading 1 Displays Block</h1>
+    <p>
+
+    <span class = "silly_font"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis
+        justo porta, ultricies sem suscipit, hendrerit metus. Nunc aliquam tellus
+        eu tincidunt rhoncus. </span>  Mauris rhoncus risus nec venenatis ultrices.
+      Vestibulum blandit laoreet enim,<a href="#">a aliquam </a>  neque tempor sit amet. Duis
+        varius metus vitae felis maximus sagittis. Curabitur vehicula vestibulum
+        felis et posuere. Donec scelerisque volutpat luctus.
+    </p>
+    
+    <p id=" important_text">
+      Vivamus laoreet, eros quis tincidunt aliquam, orci nisl egestas lacus, sit
+      amet eleifend dolor leo ultricies enim. Nunc mauris neque, iaculis in
+      ullamcorper feugiat, rhoncus et mauris. Aenean sem sem, congue vel
+      fringilla sed, ultrices rutrum purus. Phasellus luctus quam ut placerat
+      sagittis. Mauris vitae faucibus quam, sit amet accumsan magna. Cras nec
+      tempus ligula. Pellentesque a semper arcu.
+    </p>
+    <p>
+      Maecenas a nulla et nisi tristique ultricies. Etiam ut justo lacus. Duis
+      eu mauris eu mi finibus efficitur sed vel elit. Aenean vitae varius urna.
+      Nulla maximus tincidunt ipsum, a viverra nibh. Aliquam faucibus metus id
+      ante ullamcorper fermentum. Sed laoreet ipsum erat, ut scelerisque tortor
+      dignissim sed. Etiam maximus mi nulla, efficitur volutpat urna tincidunt
+      eu. Praesent ut ligula libero.
+    </p>
+    <a href="#"> Link outside of p tag</a>
+  </body>
+</html>

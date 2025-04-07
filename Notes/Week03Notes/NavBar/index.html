@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Navbar w/ Inline-Block</title>
+
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=EB+Garamond&display=swap');
+    /* font-family: 'Cute Font', sans-serif;*/
+
+      *{
+        margin:0;
+        padding: 0;
+      }
+
+      ul {
+        list-style-type: none;
+        background-color: #777d91;
+        /*overflow: hidden;
+        height: 10px;*/
+        /*parent elements of items that display incline block may need to have 
+        the font size zer-ed out to remove the space between characters*/
+        font-size: 0;
+        font-family: 'Cute Font', sans-serif;
+        /*x,y,*blur*,*spread*, *color*/
+        box-shadow: 5px, 5px, 15px, 15px #ffbb4ddc;
+      }
+
+      li{
+        display: inline-block;
+        font-size: 1rem;
+      }
+
+      /*descendant selector*/
+      li a{
+        display: block; 
+        text-align: center;
+        width: 100px;
+        padding: 10px;
+        text-decoration: none;
+        color: #f5e6d4;
+
+      }
+
+      li a.active {
+        background-color: rgba(200,210,230,0.30);
+      }
+
+      li a:hover{
+        background-color: #111;
+        color: white;
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#"> Link 1 </a></li>
+        <li><a href="#"> Link 2 </a></li>
+        <li><a href="#" class= "active" > Link 3 </a></li>
+        <li><a href="#"> Link 4 </a></li>
+      </ul>
+
+
+
+    </nav>
+
+
+
+
+
+  </body>
+</html>
+

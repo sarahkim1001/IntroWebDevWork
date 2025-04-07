@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>setInterval</title>
+    <script>
+        let counter=0
+
+        function intervalTest(){
+            let p=document.getElementById('timeElapsed')
+            p.innerHTML=counter
+            counter+=5
+        }
+
+        //call function directly on the browser window instead of an event listener, and using set interval
+        window.setInterval(intervalTest,500)// testing the function intervalTest, tested every 500 ms (changes/ increments the number)
+
+        //how might we stop this? take a look at clearInterval()
+        //what if we want something to fire after a delay  (5s after a click) check out setTimeout() and clearTimeout()
+    </script>
+</head>
+<body>
+    <p id="timeElapsed">0</p>
+</body>
+</html>

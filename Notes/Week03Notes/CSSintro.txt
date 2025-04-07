@@ -1,0 +1,111 @@
+CSS- Cascading Style Sheets 
+
+rules of style sheets:
+- selector
+
+- declaration block 
+    list of declarations in in curly braces {}
+        - property, colon:, value, then semi-colon;
+
+selector: ex: <p> 
+declaration: {color: red; font-size: 16px;}
+
+Three Different Scopes of CSS:
+
+
+Local- confined to single elemement (tag) 
+
+Internal- affect elements in an entire page (within the .html file)
+
+External - can affect multiple pages (for nav bar and footer)
+
+Inline > Internal > External (most general to most specific)
+
+Inline Styling
+<h1 style= "color:white; background:orange; font-weight:bold;" </h1>
+
+Internal Style SHeet 
+- look 
+
+
+URLS 
+
+<img src= "some url"/>
+<a href= "some url"></a>
+
+or CSS code like 
+
+background: urk(../img/pdf.png)
+
+
+Selectors and specificity 
+
+Element/ tag/ type selector -- redefine the lookg of a specific tag 
+ex: body {background-color: #000000;}
+
+
+Class selector--> can apply to any tag 
+
+CSS:
+classes always start with .indent 
+
+ID Selector (unique) - one time per page 
+#myld{color:#38608A;}--> apply to one element to be changed in each page 
+
+
+Grouping - use when several selectors share the same declarations
+h1, h2, h3 {font-family: Georgia;}
+
+Universal selector (all the tags on the page)--> "CSS reset" common style for the web documents
+ex: {border: 2px;}
+
+Descendent selectors (parent, child, relationship, nested relationships)
+h1 em{color:blue;} (h1 with an em inside no comma seperation)
+
+units of measurment 
+for fonts
+em (font size)- 16 pixels (default font size)
+px (pixels) 
+
+Percentages [a number + %]
+
+rgb hexadecimal notation #rrggbb, or #r,g,b
+RGB value in functional notation: rgb(rrr,ggg,bbb,aaa)--> fourth argument is alpha -- like javascript
+
+
+margin: <length>
+border: <style> <width> <color>
+padding: <length>
+width and height: <length>
+
+Text Properties
+
+font-family: 
+font-size:
+font-weight:
+normal
+font-style:
+line-height
+text-transformation
+color: <color>
+
+positioning properties 
+- need position propert before left/top/right/bottom --> usually used when position is specfied as absolute 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

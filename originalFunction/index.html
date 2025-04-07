@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Image Layering</title>
+  <!--<link rel="stylesheet" href="./css/style.css" />-->  
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=M+PLUS+Code+Latin:wght@100..700&family=Nanum+Myeongjo&family=Nova+Square&family=Syne+Mono&display=swap');
+        *{
+            margin:0;
+            font-family: "Syne Mono", monospace;
+            background-color: rgb(0, 0, 0);
+        }
+        img{
+            margin:0 2%;
+            width:96%;
+            height:100vh;
+            position:absolute;
+            opacity:0;
+        }
+        .container{
+            position:relative;
+            width:100%;
+            margin:0 auto;
+            /*if line height matches input height, text on labels will align with center of the input tags*/
+            line-height:30px; /*make the line height the height of the input*/
+            margin-top:1rem;
+            padding-bottom:1rem;
+            padding-left:4rem;
+            border:none;
+            z-index:1000;
+        }
+        h1{
+            color:white;
+            font-size:1rem;
+        }
+        .container button{
+            width:100px;
+            border:none;
+            border-radius:1rem;
+            cursor: pointer;
+            margin: 4px 0;
+            margin-left:3rem;
+            padding:4px 4px;
+            color:white;
+            background-color:#151515;
+            transition: background-color 2s ease;
+        }
+        .container button:hover{
+            background-color:#383838;
+        }
+        label{
+            color:white;
+            font-size:.8rem;
+        }
+      
+    </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+       let images = [
+                    document.getElementById("winter"),
+                    document.getElementById("grow"),
+                    document.getElementById("cycle"),
+                    document.getElementById("dead"),
+                    document.getElementById("flare"),
+                    document.getElementById("forrest"),
+                    document.getElementById("field"),
+                    document.getElementById("amor"),
+                    document.getElementById("cool"),
+                    document.getElementById("dark"),
+                    document.getElementById("behind")
+            ]
+
+        document.getElementById('layerBtn').addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent the form from submitting
+
+            let nLayers = document.getElementsByName('layer'); // Get all the radio buttons
+            let value; // Declare variable to hold the selected number of layers
+
+            // Find which radio button is checked
+            for (let i = 0; i < nLayers.length; i++) {
+                if (nLayers[i].checked) {
+                    value = nLayers[i].value; // Set the value to the value of the checked radio button
+                    break;
+                }
+            }
+
+            images.forEach(function (img, index) { // Loop over each image
+                if (index < value) { // If the index of the image is less than the chosen number of layers
+                    img.style.opacity = 0.4; // Make the image visible
+                } else {
+                    img.style.opacity = 0; // Hide the image
+                }
+            })
+        })
+
+        document.getElementById('orderBtn').addEventListener('click', function(e){
+                e.preventDefault();
+
+                //Randomizing the order of the list of images to layer 
+                for (let i=0; i<images.length;i++){
+                    let randomIndex= Math.floor(Math.random() * (i+1))
+                    let itemAtIndex= images[randomIndex]
+                    images[randomIndex]= images[i]
+                    images[i]= itemAtIndex
+                }
+
+            })
+            document.getElementById('reorderBtn').addEventListener('click', function(e){
+                e.preventDefault();
+                images = [
+                    document.getElementById("winter"),
+                    document.getElementById("grow"),
+                    document.getElementById("cycle"),
+                    document.getElementById("dead"),
+                    document.getElementById("flare"),
+                    document.getElementById("forrest"),
+                    document.getElementById("field"),
+                    document.getElementById("amor"),
+                    document.getElementById("cool"),
+                    document.getElementById("dark"),
+                    document.getElementById("behind")
+            ]
+            
+            
+        
+            })
+    })
+</script>
+</head>
+<body>
+    <div>
+        <img src="img/amor.jpg" id="amor" >
+        <img src="img/behind.JPG" id="behind">
+        <img src="img/dead.JPG" id="dead">
+        <img src="img/field.JPG" id="field">
+        <img src="img/flare.jpg" id="flare">
+        <img src="img/grow.JPG" id="grow">
+        <img src="img/hand.jpg" id="hand">
+        <img src="img/intoDark.JPG" id="dark">
+        <img src="img/shy.JPG" id="shy">
+        <img src="img/growth.jpg" id="growth">
+        <img src="img/Desolate-Winter-Landscape.jpg" id="winter">
+        <img src="img/forrest1.jpg" id="forrest">
+        <img src="img/cycle.JPG" id="cycle" >
+        <img src="img/cool.JPG" id="cool" >
+    </div>
+    <div class="container">
+        <h1>number of layers</h1>
+        <form>
+        <!--Radio Group for how many layers-->
+            <label><input type="radio" name="layer" value="0" checked>0</label> <!--use radio groups if only one can be checked-->
+            <label><input type="radio" name="layer" value="1">1</label>
+            <label><input type="radio" name="layer" value="2" >2</label>
+            <label><input type="radio" name="layer" value="3">3</label>
+            <label><input type="radio" name="layer" value="4">4</label>
+            <label><input type="radio" name="layer" value="5">5</label>
+            <label><input type="radio" name="layer" value="6">6</label>
+            <label><input type="radio" name="layer" value="7">7</label>
+            <label><input type="radio" name="layer" value="8">8</label>
+            <label><input type="radio" name="layer" value="9">9</label>
+            <label><input type="radio" name="layer" value="10">10</label>
+            
+            <button type="reorder" id="reorderBtn">standard order</button>
+            <button type="submit" id="orderBtn">randomly layer</button>
+            <button type="submit" id="layerBtn">show</button>
+        </form>
+    </div>
+</body>
+
+</html>

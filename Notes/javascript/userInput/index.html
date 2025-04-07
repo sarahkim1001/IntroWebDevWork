@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Input Simple</title>
+    <script>
+        // let's write a function that changes the color of the H1 based on user input in a form 
+        //make sure we don't try and grab any DOM elements with JS until the page has fully loaded!!!!!!!
+
+        document.addEventListener('DOMContentLoaded',function(){
+            //assign HTML elements to variables 
+            // add event listeners to HTML elements
+            let myBtn= document.getElementById('changeBtn') // javascript variable name for the HTML element with id='changeBtn'
+            //console.log(myBtn.classList)
+
+            myBtn.addEventListener('click', pickAClass)
+        })
+        
+        function pickAClass(){
+                //grab our user number input when we click on myBtn
+                let userN=document.getElementById('num')
+                console.log(typeof userN.value) // typeof --> marks the type; user input is always a string
+                //need to change from string to integer with parseInt function 
+                let n = parseInt(userN.value)
+                console.log(typeof n)
+
+                //grab our H1 element and sort it as a js variable 
+                let h=document.getElementById('changeMe')
+                //rather than having a list of conditional statements, let's use a switch statement 
+                switch(n){ // n can be 0, 1, 2, or 3
+                    case 0:
+                        h.className='red'
+                        break
+                    case 1:
+                        h.className='green'
+                        break
+                    case 2:
+                        h.className='blue'
+                        break
+                    case 3:
+                        h.className='purple'
+                        break
+                    default: // ALWAYS NEED A DEFAULT CASE
+                        //this is where you put the none of the above option, 
+                        // you may never hit this case, but you need to define it
+                        break
+                }
+            }
+
+    </script>
+    <style>
+        h1{
+            text-transform:uppercase;
+        }
+        .red{
+            color:rgb(204, 48, 48);
+        }
+        .green{
+            color: #139d46;
+        }
+
+        .blue{
+            color:rgba(12, 35, 165, 0.7);
+        }
+
+        .purple{
+            color: rgb(128, 0, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="changeMe">Get user input</h1>
+    
+    <form> <!--put input in form tag-->
+        <fieldset> <!--form grouped-->
+            <legend>Pick a number between 0 and 3</legend>
+            <label for="num">0-3</label> <!--label FOR should match the NAME in the input-->
+            <input type="number" name="num" id="num" min="0" max="3" step="1" placeholder="0"/>
+            <button type="button" id="changeBtn" class="btnClass">Click to change the color class of the H1</button> <!-- type= "submit" will have input validation or invalidation-->
+        </fieldset>
+    </form>
+
+</body>
+</html>
